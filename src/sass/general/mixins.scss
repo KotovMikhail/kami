@@ -1,0 +1,194 @@
+@mixin desktop-only {
+  @media (min-width: $width-desktop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $width-laptop - 1px) {
+    @content;
+  }
+}
+
+@mixin tablet-media {
+  @media (max-width: $width-tablet-media) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (max-width: $width-laptop - 1px) and (min-width: $width-tablet) {
+    @content;
+  }
+}
+
+@mixin tablet-small {
+  @media (max-width: $width-tablet-lg - 1px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $width-tablet - 1px) {
+    @content;
+  }
+}
+
+@mixin mobile-small {
+  @media (max-width: $width-mobile - 1px) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+@mixin font-xxl {
+  font-size: size(64px);
+  line-height: size(72px);
+  font-weight: normal;
+}
+
+@mixin font-xl {
+  font-size: size(56px);
+  line-height: size(64px);
+  font-weight: normal;
+}
+
+@mixin font-large {
+  font-size: size(40px);
+  line-height: size(47px);
+  font-weight: normal;
+}
+
+@mixin font-medium {
+  font-size: size(32px);
+  line-height: size(40px);
+  font-weight: normal;
+}
+
+@mixin font-small {
+  font-size: size(24px);
+  line-height: size(32px);
+  font-weight: normal;
+}
+
+@mixin font-xs {
+  font-size: size(16px);
+  line-height: size(26px);
+  font-weight: normal;
+}
+
+@mixin font-xxs {
+  font-size: size(14px);
+  line-height: size(20px);
+  font-weight: normal;
+}
+
+@mixin font-xxxs {
+  font-size: size(12px);
+  line-height: size(18px);
+  font-weight: normal;
+}
+
+@mixin font-face($name, $filename, $weight, $style: normal) {
+  @font-face {
+    font-family: $name;
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+    src: url("../fonts/"+$filename+".woff2") format("woff2"),
+      url("../fonts/"+$filename+".woff") format("woff");
+  }
+}
+
+@mixin field-reset {
+  padding: 0;
+  background-color: $transparent;
+  border: none;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin link-reset {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+@mixin button-reset {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+@mixin active-area {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@mixin hover {
+  transition: $transition;
+
+  &::before,
+  &::after {
+    transition: transform 0.2s $transition;
+    transform-origin: center;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    &::before,
+    &::after {
+      transform: scale(1.2);
+    }
+  }
+}
+
+@mixin animated {
+  animation-fill-mode: both;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+}
+
+@mixin animated-title {
+  transform: translateY(100%);
+  opacity: 0;
+
+  animation-name: title;
+  animation-delay: 0.6s;
+  animation-fill-mode: both;
+  animation-duration: 0.4s;
+  animation-timing-function: $light-bounce;
+}
+
+@mixin animated-content {
+  opacity: 0;
+  animation-name: show;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+}

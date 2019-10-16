@@ -1,0 +1,13 @@
+/* Vendor */
+@import "vendor/normalize";
+@import "vendor/swiper.scss";
+/* General */
+@import "general/variables";
+@import "general/functions";
+@import "general/mixins";
+@import "general/fonts";
+@import "general/global";
+@import "general/animations";
+/* Blocks */
+
+@import "blocks/gallery";
