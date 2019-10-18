@@ -23,6 +23,7 @@ var pug = require('gulp-pug');
 var prettier = require('gulp-pretty-html');
 
 var server = require('browser-sync').create();
+var replace = require('gulp-replace');
 
 gulp.task('clean', function() {
   return del('build');
@@ -97,6 +98,7 @@ gulp.task('style', function () {
     .pipe(sass({
       outputStyle: 'expanded'
     }))
+    .pipe(replace('url("../../', 'url("../'))
     .pipe(postcss([
       autoprefixer()
     ]))
