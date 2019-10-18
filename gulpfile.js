@@ -98,7 +98,7 @@ gulp.task('style', function () {
     .pipe(sass({
       outputStyle: 'expanded'
     }))
-    .pipe(replace('url("../../', 'url("../'))
+    .pipe(replace('url("../../../', 'url("../'))
     .pipe(postcss([
       autoprefixer()
     ]))
