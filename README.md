@@ -1,4 +1,4 @@
-# voshod
+# Kami-test
 
 # Посмотреть сайт можно по ссылке:
 https://kotovmikhail.github.io/kami/build/index.html
