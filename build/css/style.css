@@ -1091,6 +1091,14 @@ body {
   display: none;
 }
 
+.review__disconnected {
+  color: #bbbcc4;
+}
+
+.review__disconnected--hidden {
+  display: none;
+}
+
 .updates {
   color: #694caf;
 }
