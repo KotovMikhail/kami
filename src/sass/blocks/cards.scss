@@ -56,7 +56,7 @@
     align-items: center;
     margin-bottom: 10px;
 
-    @include mobile-small {
+    @include mobile {
       position: relative;
       flex-direction: column;
       align-items: flex-start;

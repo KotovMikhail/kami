@@ -87,7 +87,7 @@
     background-size: contain;
     transition: all 0.2s ease-in-out;
 
-    @include mobile-small {
+    @include mobile {
       position: absolute;
       top: 0;
       right: 0;

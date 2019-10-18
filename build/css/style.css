@@ -640,7 +640,7 @@ body {
   margin-bottom: 10px;
 }
 
-@media (max-width: 374px) {
+@media (max-width: 767px) {
   .cards__header {
     position: relative;
     -webkit-box-orient: vertical;
@@ -803,7 +803,7 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-@media (max-width: 374px) {
+@media (max-width: 767px) {
   .btn--settings {
     position: absolute;
     top: 0;
