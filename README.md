@@ -1,7 +1,7 @@
 # voshod
 
 # Посмотреть сайт можно по ссылке:
-https://kotovmikhail.github.io/voshod/build/index.html
+https://kotovmikhail.github.io/kami/build/index.html
 
 ## Установка и сборка
 

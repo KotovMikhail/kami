@@ -1,5 +1,6 @@
 const btnSettings = document.querySelectorAll(`.btn--settings`);
 
+
 const addBtnClickHandler = function (btn) {
 
   btn.addEventListener(`click`, function () {
@@ -12,10 +13,10 @@ const addBtnClickHandler = function (btn) {
       const btnSearchs = search.querySelectorAll(`.btn--search`);
       const btnAction = cardsItem.querySelector(`.btn--action`);
 
-      if(btnAction) {
+      if (btnAction) {
         btnAction.classList.toggle(`btn--hidden`);
       } else {
-        return
+        return;
       }
 
       for (let i = 0; i < btnSearchs.length; i++) {
@@ -24,15 +25,13 @@ const addBtnClickHandler = function (btn) {
     });
 
     btnDropdown.classList.toggle(`btn--show`);
+
   });
 };
-
 
 for (let i = 0; i < btnSettings.length; i++) {
   addBtnClickHandler(btnSettings[i]);
 }
-
-
 
 
 
