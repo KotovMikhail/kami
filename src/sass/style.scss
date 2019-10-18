@@ -1,6 +1,5 @@
 /* Vendor */
 @import "vendor/normalize";
-@import "vendor/swiper.scss";
 /* General */
 @import "general/variables";
 @import "general/functions";
@@ -10,4 +9,9 @@
 @import "general/animations";
 /* Blocks */
 
-@import "blocks/gallery";
+@import "blocks/statistics";
+@import "blocks/cards";
+@import "blocks/btn";
+@import "blocks/search";
+@import "blocks/review";
+@import "blocks/updates";

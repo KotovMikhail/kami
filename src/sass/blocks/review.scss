@@ -1,0 +1,107 @@
+.review {
+  display: flex;
+  align-items: flex-start;
+
+  @include mobile {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &__rating {
+    position: relative;
+    padding-left: 21px;
+    @include font-xs-bold;
+    color: $gold;
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
+
+    &--hidden {
+      display:none;
+    }
+
+    &--gold-star {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 16px;
+        height: 15px;
+        background-image: url("../../../img/icon-star-gold.svg");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: contain;
+      }
+    }
+
+    &--grey-star {
+      color: $french-grey;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 16px;
+        height: 15px;
+        background-image: url("../../../img/icon-star-grey.svg");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__quantity {
+    position: relative;
+    font: inherit;
+    margin: 0;
+    margin-left: 15px;
+    padding-left: 9px;
+    box-sizing: border-box;
+
+    &--hidden {
+      display:none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background-color: $black-mine-shaft;
+    }
+  }
+
+  &__updates {
+    margin-left: auto;
+  }
+
+  &__btn-action {
+    margin-left: auto;
+  }
+
+  &__search {
+    color: $french-grey;
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
+
+    &--hidden {
+      display:none;
+    }
+  }
+}

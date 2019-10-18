@@ -1,0 +1,204 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  color: $black-mine-shaft;
+  padding-top: 8px;
+  padding-right: 9px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  border: 0;
+  outline: 0;
+  font-size: 13px;
+  line-height: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+
+  &--dropdown {
+    display: none;
+    position: absolute;
+    z-index: 99999;
+    top: 38px;
+    right: -29px;
+    padding-top: 13px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    border-radius: 5px;
+    @include font-xxl;
+    border: 1px solid $catskill-white;
+    color: $light-purple;
+    background-color: $white;
+    transition: all 0.2s ease-in-out;
+
+    @include mobile {
+      top: 33px;
+      right: -8px;
+      padding: 8px;
+      @include font-xs;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      top: -26px;
+      right: 21px;
+      border: 10px solid transparent;
+      border-bottom: 15px solid #e6ecf2;
+
+      @include mobile {
+        right: 0;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      top: -22px;
+      right: 24px;
+      border: 7px solid transparent;
+      border-bottom: 13px solid #ffffff;
+
+      @include mobile {
+        right: 3px;
+      }
+    }
+  }
+
+  &--settings {
+    position: relative;
+    padding: 0;
+    width: 4px;
+    height: 18px;
+    background-color: $white;
+    background-image: url("../../../img/icon-dots.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+    transition: all 0.2s ease-in-out;
+
+    @include mobile-small {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      background-image: url("../../../img/icon-dots-active.svg");
+    }
+  }
+
+
+  &--search {
+    background-color: $white;
+    border: 1px solid $catskill-white;
+    transition: all 0.2s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 8px;
+      width: 10px;
+      height: 11px;
+      background-image: url("../../../img/icon-mark-black.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+      border: 1px solid $royal-purple;
+      box-shadow: 0 0 10px $royal-purple;
+      transition: all 0.2s ease-in-out;
+
+      &::before {
+        transform: scale(1.2);
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+
+  &--complete {
+    color: $white;
+    border: 1px solid $royal-purple;
+    background-color: $royal-purple;
+    transition: all 0.2s ease-in-out;
+
+    &::before {
+      background-image: url("../../../img/icon-mark-white.svg");
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &--updating {
+    &::before {
+      top: 5px;
+      left: 10px;
+      width: 12px;
+      height: 16.5px;
+      background-image: url("../../../img/icon-refresh-small.svg");
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &--action {
+    background-color: $gold;
+    border: 1px solid $gold;
+    transition: all 0.2s ease-in-out;
+    color: $white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 8px;
+      width: 12px;
+      height: 14px;
+      background-image: url("../../../img/icon-bell.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+      border: 1px solid $gold;
+      box-shadow: 0 0 10px $gold;
+      transition: all 0.2s ease-in-out;
+
+      &::before {
+        transform: scale(1.2);
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+
+  &--hidden {
+    display: none;
+    transition: all 0.2s ease-in-out;
+
+  }
+
+  &--show {
+    display:block;
+  }
+}
+
+
+
+
+
+

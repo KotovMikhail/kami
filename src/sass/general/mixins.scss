@@ -46,52 +46,36 @@
   }
 }
 
+@mixin font-xxl-bold {
+  font-family: $font-family-bold;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 700;
+}
+
 @mixin font-xxl {
-  font-size: size(64px);
-  line-height: size(72px);
-  font-weight: normal;
-}
-
-@mixin font-xl {
-  font-size: size(56px);
-  line-height: size(64px);
-  font-weight: normal;
-}
-
-@mixin font-large {
-  font-size: size(40px);
-  line-height: size(47px);
-  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
 }
 
 @mixin font-medium {
-  font-size: size(32px);
-  line-height: size(40px);
-  font-weight: normal;
-}
-
-@mixin font-small {
-  font-size: size(24px);
-  line-height: size(32px);
-  font-weight: normal;
+  font-family: $font-family-bold;
+  font-size: 25px;
+  line-height: 32px;
+  font-weight: 700;
 }
 
 @mixin font-xs {
-  font-size: size(16px);
-  line-height: size(26px);
-  font-weight: normal;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
 }
-
-@mixin font-xxs {
-  font-size: size(14px);
-  line-height: size(20px);
-  font-weight: normal;
-}
-
-@mixin font-xxxs {
-  font-size: size(12px);
-  line-height: size(18px);
-  font-weight: normal;
+@mixin font-xs-bold {
+  font-family: $font-family-bold;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 700;
 }
 
 @mixin font-face($name, $filename, $weight, $style: normal) {
@@ -100,8 +84,8 @@
     font-weight: $weight;
     font-style: $style;
     font-display: swap;
-    src: url("../fonts/"+$filename+".woff2") format("woff2"),
-      url("../fonts/"+$filename+".woff") format("woff");
+    src: url("../fonts/" +$filename+ ".woff2") format("woff2"),
+  url("../fonts/"+$filename+".woff") format("woff");
   }
 }
 

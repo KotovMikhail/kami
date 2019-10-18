@@ -1,27 +1,30 @@
-$width-desktop:   1440px;
-$width-laptop:    1200px;
-$width-tablet-lg: 1024px;
-$width-tablet:     768px;
-$width-mobile:     375px;
-$width-min:        320px;
+$width-desktop: 1440px;
+$width-laptop: 1184px;
+$width-tablet-lg: 900px;
+$width-tablet: 768px;
+$width-mobile: 375px;
+$width-min: 320px;
 
 $width-tablet-media: 1000px;
 
-$height-desktop:   800px;
-$height-tablet:    768px;
+$height-desktop: 800px;
+$height-tablet: 768px;
 
-$retina-dpi:      144dpi;
-$retina-dppx:    1.5dppx;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
 
-$font-family: "Rkm", "Arial", sans-serif;
-$font-main: 16px;
+$font-family: "Roboto-Regular", "Arial", sans-serif;
+$font-family-bold: "Roboto-Bold", "Arial", sans-serif;
+$font-main: 13px;
 
-$black:           #000000;
-$white:           #ffffff;
+$black: #000000;
+$white: #ffffff;
+$catskill-white:#e6ecf2;
+$black-mine-shaft: #222222;
+$light-grey: #cedae6;
+$french-grey: #bbbcc4;
+$gold: #ffaa30;
+$purple: #4a0594;
+$royal-purple: #5a39a7;
+$light-purple:#694caf;
 $transparent: transparent;
-
-
-
-
-
-

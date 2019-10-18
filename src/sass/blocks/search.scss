@@ -1,0 +1,31 @@
+.search {
+  margin-bottom: 18px;
+
+  &--hidden {
+    display:none;
+  }
+
+  &__list {
+    @include list-reset;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include mobile {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+
+}

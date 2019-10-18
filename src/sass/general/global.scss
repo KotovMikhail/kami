@@ -28,8 +28,8 @@ body {
   @include font-xs;
   font-family: $font-family;
   font-weight: 400;
-  color: $black;
-  background-color: $white;
+  color: $black-mine-shaft;
+  background-color: $catskill-white;
 }
 
 .visually-hidden {
@@ -43,12 +43,18 @@ body {
   overflow: hidden;
 }
 
+.page__wrap {
+  margin-top: 15px;
+  padding-bottom: 70px;
+  background-color: $white;
+}
+
 .container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1184px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 size-desktop(41px);
+  padding: 0 65px;
   box-sizing: border-box;
 
   @include mobile {
